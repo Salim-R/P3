@@ -1,0 +1,16 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Site de reservation de restaurant en ligne",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss:style.css",
+    "prefix": "postcss style.css --use autoprefixer -d prefixed/"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "sass": "^1.49.0"
+  }
+}
