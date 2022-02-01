@@ -1,0 +1,39 @@
+.reservez {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 21px;
+}
+
+.reservez h2 {
+  font-size: 29px;
+}
+
+.reservez p {
+  font-size: 16px;
+}
+
+.reservez button {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  -webkit-box-shadow: 1px 2px 16px -5px #000000;
+          box-shadow: 1px 2px 16px -5px #000000;
+  padding: 16px 20px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+  margin-top: 16px;
+  margin-bottom: 25px;
+}
+
+.reservez button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 0.9;
+}
+/*# sourceMappingURL=reservez.css.map */

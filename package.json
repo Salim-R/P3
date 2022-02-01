@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "browserslist": "last 4 versions",
-  "dependencies": {
-    "sass": "^1.49.0"
+  "devDependencies": {
+    "sass": "^1.49.4"
   }
 }
