@@ -1,7 +1,8 @@
+@import "../utils/mixin.scss";
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0 3px 5px #d3d3d3;
+  @include shadow;
   padding: 5px;
   position: relative;
   h1 {

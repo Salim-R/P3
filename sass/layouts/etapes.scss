@@ -1,0 +1,17 @@
+.etapes {
+  & ol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 25px;
+  }
+  & li {
+    background-color: #f6f6f6;
+    padding: 16px 32px;
+    border-radius: 16px;
+    @include shadow;
+    &:hover {
+      @include zoom;
+    }
+  }
+}

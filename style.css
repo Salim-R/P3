@@ -11,6 +11,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.etapes {
+  padding: 0 16px;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -82,5 +86,30 @@ header h1 {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   opacity: 0.9;
+}
+
+.etapes ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding-left: 25px;
+}
+
+.etapes li {
+  background-color: #f6f6f6;
+  padding: 16px 32px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 3px 5px #d3d3d3;
+          box-shadow: 0 3px 5px #d3d3d3;
+}
+
+.etapes li:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 /*# sourceMappingURL=style.css.map */
