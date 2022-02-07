@@ -1,0 +1,31 @@
+footer {
+  background-color: $footer-color;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  h2 {
+    font-family: "Shrikhand", sans-serif;
+    color: white;
+    font-weight: 500;
+    margin-top: 1.8rem;
+    font-size: 1.2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  a {
+    padding: 0.2rem;
+    color: white;
+    i {
+      padding-right: 0.8rem;
+    }
+  }
+  .fa,
+  .fas {
+    width: 16px;
+    padding-right: 1.7rem;
+  }
+  .fa-hands-helping:before {
+    font-size: 0.7rem;
+  }
+}
