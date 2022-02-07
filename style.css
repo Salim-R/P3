@@ -88,6 +88,10 @@ header h1 {
 }
 .etapes li:hover {
   transform: scale(1.02);
+  background-color: #f5edff;
+}
+.etapes li:hover i.fas {
+  color: #9356dc;
 }
 .etapes li i.fas {
   color: #7e7e7e;

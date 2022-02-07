@@ -18,6 +18,10 @@
     @include shadow;
     &:hover {
       @include zoom;
+      background-color: #f5edff;
+      & i.fas {
+        color: $color-primary;
+      }
     }
     & i.fas {
       color: #7e7e7e;
