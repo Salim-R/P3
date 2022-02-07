@@ -1,3 +1,4 @@
+@import "../utils/variables.scss";
 .reservez {
   text-align: center;
   background-color: #f2f2f2;
@@ -9,7 +10,7 @@
     font-size: 16px;
   }
   button {
-    background-image: linear-gradient(to top, #9356dc, #ff79da);
+    background-image: linear-gradient(to top, $color-primary, $color-secondary);
     color: white;
     font-weight: 400;
     font-size: 16px;
@@ -22,7 +23,7 @@
     margin-bottom: 25px;
   }
   button:hover {
-    transform: scale(1.02);
+    @include zoom;
     opacity: 0.9;
   }
 }

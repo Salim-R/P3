@@ -1,17 +1,42 @@
+@import "../utils/variables.scss";
+
 .etapes {
+  counter-reset: etapes;
   & ol {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1.5 * $size-etapes;
     padding-left: 25px;
   }
   & li {
+    position: relative;
     background-color: #f6f6f6;
-    padding: 16px 32px;
+    padding: 22px 32px;
     border-radius: 16px;
+    list-style-type: none;
+    font-weight: 500;
     @include shadow;
     &:hover {
       @include zoom;
+    }
+    & i.fas {
+      color: #7e7e7e;
+      margin-right: $size-etapes;
+      font-size: 1.2 * $size-etapes;
+    }
+    &::before {
+      counter-increment: etapes;
+      content: counter(etapes);
+      background-color: $color-primary;
+      color: white;
+      border-radius: 50%;
+      width: 1.7 * $size-etapes;
+      height: 1.7 * $size-etapes;
+      display: grid;
+      place-items: center;
+      position: absolute;
+      bottom: $size-etapes;
+      left: -$size-etapes;
     }
   }
 }

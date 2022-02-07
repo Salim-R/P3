@@ -3,8 +3,7 @@
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,12 +17,10 @@ body {
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  -webkit-box-shadow: 0 3px 5px #d3d3d3;
-          box-shadow: 0 3px 5px #d3d3d3;
+  box-shadow: 0 3px 5px #d3d3d3;
   padding: 5px;
   position: relative;
 }
-
 header h1 {
   margin-bottom: 0;
 }
@@ -32,18 +29,11 @@ header h1 {
   background-color: #eaeaea;
   text-align: center;
   padding: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
-
 .city h2 {
   font-size: 16px;
   font-weight: 500;
@@ -54,62 +44,69 @@ header h1 {
   background-color: #f2f2f2;
   padding: 21px;
 }
-
 .reservez h2 {
   font-size: 29px;
 }
-
 .reservez p {
   font-size: 16px;
 }
-
 .reservez button {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background-image: linear-gradient(to top, #9356dc, #ff79da);
   color: white;
   font-weight: 400;
   font-size: 16px;
   border: none;
   border-radius: 32px;
-  -webkit-box-shadow: 1px 2px 16px -5px #000000;
-          box-shadow: 1px 2px 16px -5px #000000;
+  box-shadow: 1px 2px 16px -5px #000000;
   padding: 16px 20px;
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
   transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
   margin-top: 16px;
   margin-bottom: 25px;
 }
-
 .reservez button:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   opacity: 0.9;
 }
 
+.etapes {
+  counter-reset: etapes;
+}
 .etapes ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
+  flex-direction: column;
+  gap: 1.5rem;
   padding-left: 25px;
 }
-
 .etapes li {
+  position: relative;
   background-color: #f6f6f6;
-  padding: 16px 32px;
+  padding: 22px 32px;
   border-radius: 16px;
-  -webkit-box-shadow: 0 3px 5px #d3d3d3;
-          box-shadow: 0 3px 5px #d3d3d3;
+  list-style-type: none;
+  font-weight: 500;
+  box-shadow: 0 3px 5px #d3d3d3;
+}
+.etapes li:hover {
+  transform: scale(1.02);
+}
+.etapes li i.fas {
+  color: #7e7e7e;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+.etapes li::before {
+  counter-increment: etapes;
+  content: counter(etapes);
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
 }
 
-.etapes li:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
 /*# sourceMappingURL=style.css.map */
