@@ -11,7 +11,21 @@ body {
 }
 
 .etapes {
-  padding: 0 16px;
+  padding: 2rem 1rem;
+}
+
+.menus {
+  padding: 2rem 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3,
+p {
+  margin: 0;
 }
 
 header {
@@ -43,12 +57,14 @@ header h1 {
   text-align: center;
   background-color: #f2f2f2;
   padding: 21px;
+  margin-bottom: 2rem;
 }
 .reservez h2 {
-  font-size: 29px;
+  font-size: 23px;
 }
 .reservez p {
   font-size: 16px;
+  font-weight: 100;
 }
 .reservez button {
   background-image: linear-gradient(to top, #9356dc, #ff79da);
@@ -70,6 +86,9 @@ header h1 {
 
 .etapes {
   counter-reset: etapes;
+}
+.etapes h2 {
+  margin-bottom: 2rem;
 }
 .etapes ol {
   display: flex;
@@ -104,13 +123,59 @@ header h1 {
   background-color: #9356dc;
   color: white;
   border-radius: 50%;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: grid;
   place-items: center;
   position: absolute;
-  bottom: 1rem;
+  top: 50%;
   left: -1rem;
+  transform: translatey(-50%);
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus h2 {
+  margin-bottom: 2rem;
+}
+.menus .menus__cartes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.menus .menus__cartes .nouveau {
+  position: relative;
+}
+.menus .menus__cartes .nouveau::before {
+  content: "Nouveau";
+  color: #1c9879;
+  font-weight: 500;
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+  background-color: #99e2d0;
+}
+.menus .carte__image {
+  background-size: cover;
+  height: 14rem;
+  border-radius: 1rem;
+}
+.menus .carte__image-1 {
+  background-image: url("/images/restaurants/image-1.jpg");
+}
+.menus .carte__image-2 {
+  background-image: url("/images/restaurants/image-2.jpg");
+}
+.menus .carte__image-3 {
+  background-image: url("/images/restaurants/image-3.jpg");
+}
+.menus .carte__image-4 {
+  background-image: url("/images/restaurants/image-4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */

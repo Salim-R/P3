@@ -2,6 +2,9 @@
 
 .etapes {
   counter-reset: etapes;
+  & h2 {
+    margin-bottom: 2rem;
+  }
   & ol {
     display: flex;
     flex-direction: column;
@@ -34,13 +37,14 @@
       background-color: $color-primary;
       color: white;
       border-radius: 50%;
-      width: 1.7 * $size-etapes;
-      height: 1.7 * $size-etapes;
+      width: 1.5 * $size-etapes;
+      height: 1.5 * $size-etapes;
       display: grid;
       place-items: center;
       position: absolute;
-      bottom: $size-etapes;
+      top: 50%;
       left: -$size-etapes;
+      transform: translatey(-50%);
     }
   }
 }

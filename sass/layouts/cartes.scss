@@ -1,0 +1,41 @@
+.menus {
+  background-color: #f6f6f6;
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .menus__cartes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .nouveau {
+      position: relative;
+    }
+    .nouveau::before {
+      content: "Nouveau";
+      color: #1c9879;
+      font-weight: 500;
+      position: absolute;
+      height: 2rem;
+      width: 5rem;
+      display: grid;
+      place-items: center;
+      right: 1rem;
+      top: 1rem;
+      background-color: $color-tertiary;
+    }
+  }
+  .carte {
+    &__image {
+      background-size: cover;
+      height: 14rem;
+      border-radius: 1rem;
+    }
+    @for $i from 1 through 4 {
+      &__image-#{$i} {
+        background-image: url("/images/restaurants/image-#{$i}.jpg");
+      }
+    }
+  }
+}
