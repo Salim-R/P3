@@ -30,12 +30,16 @@
   .carte {
     &__image {
       background-size: cover;
-      height: 14rem;
+      background-position: right bottom;
+      height: 16rem;
       border-radius: 1rem 1rem 0 0;
     }
     @for $i from 1 through 4 {
       &__image-#{$i} {
         background-image: url("/images/restaurants/image-#{$i}.jpg");
+      }
+      &__image-2 {
+        background-position: center;
       }
     }
     &__description {
@@ -50,11 +54,25 @@
         padding: 0.5rem 0.5rem 1rem 0.5rem;
       }
       i {
-        font-size: 2rem;
+        font-size: 2em;
         position: absolute;
+        font-size: 35px;
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .fas {
+        color: transparent;
+        @include gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+      }
+      &:hover .fas {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
       }
     }
   }

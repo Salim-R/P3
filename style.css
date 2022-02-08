@@ -164,20 +164,33 @@ header h1 {
 }
 .menus .carte__image {
   background-size: cover;
-  height: 14rem;
+  background-position: right bottom;
+  height: 16rem;
   border-radius: 1rem 1rem 0 0;
 }
 .menus .carte__image-1 {
   background-image: url("/images/restaurants/image-1.jpg");
 }
 .menus .carte__image-2 {
+  background-position: center;
+}
+.menus .carte__image-2 {
   background-image: url("/images/restaurants/image-2.jpg");
+}
+.menus .carte__image-2 {
+  background-position: center;
 }
 .menus .carte__image-3 {
   background-image: url("/images/restaurants/image-3.jpg");
 }
+.menus .carte__image-2 {
+  background-position: center;
+}
 .menus .carte__image-4 {
   background-image: url("/images/restaurants/image-4.jpg");
+}
+.menus .carte__image-2 {
+  background-position: center;
 }
 .menus .carte__description {
   position: relative;
@@ -192,11 +205,25 @@ header h1 {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
 .menus .carte__description i {
-  font-size: 2rem;
+  font-size: 2em;
   position: absolute;
+  font-size: 35px;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+}
+.menus .carte__description .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.menus .carte__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }
 
 footer {
@@ -229,6 +256,10 @@ footer .fas {
 }
 footer .fa-hands-helping:before {
   font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
