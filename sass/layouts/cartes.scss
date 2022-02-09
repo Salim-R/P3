@@ -33,6 +33,7 @@
       width: 100%;
       height: 16rem;
       border-radius: 1rem 1rem 0 0;
+      margin-bottom: -4px;
     }
     &__description {
       position: relative;
@@ -49,7 +50,7 @@
       }
       .heart i {
         position: absolute;
-        font-size: 30px;
+        font-size: 25px;
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
