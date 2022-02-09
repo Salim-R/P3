@@ -28,17 +28,17 @@
     }
   }
   .carte {
-    &__image {
+    &__Image {
       background-size: cover;
       background-position: right bottom;
       height: 16rem;
       border-radius: 1rem 1rem 0 0;
     }
     @for $i from 1 through 4 {
-      &__image-#{$i} {
-        background-image: url("../../images/restaurants/image-#{$i}.jpg");
+      &__Image#{$i} {
+        background-image: url("../../images/restaurants/Image#{$i}.jpg");
       }
-      &__image-2 {
+      &__Image2 {
         background-position: center;
       }
     }

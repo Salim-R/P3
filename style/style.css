@@ -163,34 +163,34 @@ header h1 {
   display: grid;
   place-items: center;
 }
-.menus .carte__image {
+.menus .carte__Image {
   background-size: cover;
   background-position: right bottom;
   height: 16rem;
   border-radius: 1rem 1rem 0 0;
 }
-.menus .carte__image-1 {
-  background-image: url("../../images/restaurants/image-1.jpg");
+.menus .carte__Image1 {
+  background-image: url("../../images/restaurants/Image1.jpg");
 }
-.menus .carte__image-2 {
+.menus .carte__Image2 {
   background-position: center;
 }
-.menus .carte__image-2 {
-  background-image: url("../../images/restaurants/image-2.jpg");
+.menus .carte__Image2 {
+  background-image: url("../../images/restaurants/Image2.jpg");
 }
-.menus .carte__image-2 {
+.menus .carte__Image2 {
   background-position: center;
 }
-.menus .carte__image-3 {
-  background-image: url("../../images/restaurants/image-3.jpg");
+.menus .carte__Image3 {
+  background-image: url("../../images/restaurants/Image3.jpg");
 }
-.menus .carte__image-2 {
+.menus .carte__Image2 {
   background-position: center;
 }
-.menus .carte__image-4 {
-  background-image: url("../../images/restaurants/image-4.jpg");
+.menus .carte__Image4 {
+  background-image: url("../../images/restaurants/Image4.jpg");
 }
-.menus .carte__image-2 {
+.menus .carte__Image2 {
   background-position: center;
 }
 .menus .carte__description {
