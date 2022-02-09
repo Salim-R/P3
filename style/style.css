@@ -164,34 +164,10 @@ header h1 {
   place-items: center;
 }
 .menus .carte__Image {
-  background-size: cover;
-  background-position: right bottom;
+  object-fit: cover;
+  width: 100%;
   height: 16rem;
   border-radius: 1rem 1rem 0 0;
-}
-.menus .carte__Image1 {
-  background-image: url("../../images/restaurants/Image1.jpg");
-}
-.menus .carte__Image2 {
-  background-position: center;
-}
-.menus .carte__Image2 {
-  background-image: url("../../images/restaurants/Image2.jpg");
-}
-.menus .carte__Image2 {
-  background-position: center;
-}
-.menus .carte__Image3 {
-  background-image: url("../../images/restaurants/Image3.jpg");
-}
-.menus .carte__Image2 {
-  background-position: center;
-}
-.menus .carte__Image4 {
-  background-image: url("../../images/restaurants/Image4.jpg");
-}
-.menus .carte__Image2 {
-  background-position: center;
 }
 .menus .carte__description {
   position: relative;
