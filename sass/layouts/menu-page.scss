@@ -11,7 +11,7 @@ main {
     margin-left: 1rem;
     font-size: 1.8rem;
   }
-  i {
+  .heart i {
     position: absolute;
     font-size: 30px;
     right: 2rem;
@@ -19,7 +19,7 @@ main {
     transform: translateY(-50%);
     cursor: pointer;
   }
-  .fas {
+  .fas.fa-heart {
     color: transparent;
     @include gradient;
     background-clip: text;
@@ -27,7 +27,7 @@ main {
     opacity: 0;
     transition: all 200ms ease-in-out;
   }
-  &:hover .fas {
+  &:hover .fas.fa-heart {
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
   }

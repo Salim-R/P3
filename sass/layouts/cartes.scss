@@ -45,30 +45,26 @@
       }
       p {
         padding: 0.5rem 0.5rem 1rem 0.5rem;
-        max-width: 100%;
+        max-width: 50%;
       }
-      i {
+      .heart i {
         position: absolute;
-        font-size: 35px;
+        font-size: 30px;
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
-        cursor: pointer;
       }
-      .fas {
+      .fas.fa-heart {
         color: transparent;
         @include gradient;
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        transition: all 200ms ease-in-out;
+        transition: all 500ms ease-in-out;
       }
-      &:hover .fas {
+      .fas.fa-heart:hover {
         opacity: 1;
-        transform: translateY(-50%);
-      }
-      &:hover .far-hearth {
-        color: white;
+        transform: translateY(-50%) scale(1.07);
       }
     }
   }

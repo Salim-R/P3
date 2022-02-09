@@ -181,30 +181,26 @@ header h1 {
 }
 .menus .carte__description p {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
-  max-width: 100%;
+  max-width: 50%;
 }
-.menus .carte__description i {
+.menus .carte__description .heart i {
   position: absolute;
-  font-size: 35px;
+  font-size: 30px;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
 }
-.menus .carte__description .fas {
+.menus .carte__description .fas.fa-heart {
   color: transparent;
   background-image: linear-gradient(170deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-.menus .carte__description:hover .fas {
+.menus .carte__description .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%);
-}
-.menus .carte__description:hover .far-hearth {
-  color: white;
+  transform: translateY(-50%) scale(1.07);
 }
 
 footer {
@@ -254,7 +250,7 @@ main h2 {
   margin-left: 1rem;
   font-size: 1.8rem;
 }
-main i {
+main .heart i {
   position: absolute;
   font-size: 30px;
   right: 2rem;
@@ -262,7 +258,7 @@ main i {
   transform: translateY(-50%);
   cursor: pointer;
 }
-main .fas {
+main .fas.fa-heart {
   color: transparent;
   background-image: linear-gradient(170deg, #9356dc, #ff79da);
   background-clip: text;
@@ -270,7 +266,7 @@ main .fas {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
-main:hover .fas {
+main:hover .fas.fa-heart {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
