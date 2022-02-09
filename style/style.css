@@ -51,6 +51,7 @@ header h1 {
 .city h2 {
   font-size: 16px;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
 }
 
 .reservez {
@@ -67,7 +68,7 @@ header h1 {
   font-weight: 100;
 }
 .reservez button {
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-image: linear-gradient(170deg, #9356dc, #ff79da);
   color: white;
   font-weight: 400;
   font-size: 16px;
@@ -200,9 +201,11 @@ header h1 {
 }
 .menus .carte__description h3 {
   padding: 1.2rem 0.5rem 0 0.5rem;
+  max-width: 50%;
 }
 .menus .carte__description p {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
+  max-width: 100%;
 }
 .menus .carte__description i {
   position: absolute;
@@ -214,7 +217,7 @@ header h1 {
 }
 .menus .carte__description .fas {
   color: transparent;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-image: linear-gradient(170deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -222,7 +225,10 @@ header h1 {
 }
 .menus .carte__description:hover .fas {
   opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%);
+}
+.menus .carte__description:hover .far-hearth {
+  color: white;
 }
 
 footer {
@@ -282,7 +288,7 @@ main i {
 }
 main .fas {
   color: transparent;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-image: linear-gradient(170deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;

@@ -49,9 +49,11 @@
       @include shadow;
       h3 {
         padding: 1.2rem 0.5rem 0 0.5rem;
+        max-width: 50%;
       }
       p {
         padding: 0.5rem 0.5rem 1rem 0.5rem;
+        max-width: 100%;
       }
       i {
         position: absolute;
@@ -71,7 +73,10 @@
       }
       &:hover .fas {
         opacity: 1;
-        transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%);
+      }
+      &:hover .far-hearth {
+        color: white;
       }
     }
   }
