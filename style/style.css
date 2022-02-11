@@ -236,29 +236,35 @@ footer .fa-hands-helping:before {
   font-size: 0.7rem;
 }
 
-img {
-  max-width: 100%;
+.banniere img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
 }
 
-main {
+.menu__title {
   position: relative;
-  background-color: white;
-  border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 3px 5px #d3d3d3;
+  background-color: #f6f6f6;
+  border-radius: 1.7rem 1.7rem 0 0;
+  margin-top: -2.5rem;
 }
-main h2 {
-  margin-left: 1rem;
+.menu__title h2 {
   font-size: 1.8rem;
+  font-family: "Shrikhand", cursive;
+  padding: 1rem;
+  margin: 0;
 }
-main .heart i {
+.menu__title .heart i {
   position: absolute;
   font-size: 30px;
-  right: 2rem;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
-main .fas.fa-heart {
+.menu__title .fas.fa-heart {
   color: transparent;
   background-image: linear-gradient(170deg, #9356dc, #ff79da);
   background-clip: text;
@@ -266,9 +272,24 @@ main .fas.fa-heart {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
-main:hover .fas.fa-heart {
+.menu__title .fas.fa-heart:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
+}
+
+.commandez {
+  background: #f6f6f6;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+.commandez .commandez__categorie {
+  border: 1px solid blue;
+  background-color: white;
+}
+
+.main-categorie {
+  padding: 0 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

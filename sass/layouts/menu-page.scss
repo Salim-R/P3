@@ -1,19 +1,25 @@
-img {
-  max-width: 100%;
+.banniere img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
 }
-main {
+.menu__title {
   position: relative;
-  background-color: white;
-  border-radius: 1rem 1rem 0 0;
-  @include shadow;
+  background-color: #f6f6f6;
+  border-radius: 1.7rem 1.7rem 0 0;
+  margin-top: -2.5rem;
   h2 {
-    margin-left: 1rem;
     font-size: 1.8rem;
+    font-family: "Shrikhand", cursive;
+    padding: 1rem;
+    margin: 0;
   }
   .heart i {
     position: absolute;
     font-size: 30px;
-    right: 2rem;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -26,8 +32,21 @@ main {
     opacity: 0;
     transition: all 200ms ease-in-out;
   }
-  &:hover .fas.fa-heart {
+  .fas.fa-heart:hover {
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
   }
+}
+.commandez {
+  background: #f6f6f6;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  .commandez__categorie {
+    border: 1px solid blue;
+    background-color: white;
+  }
+}
+.main-categorie {
+  padding: 0 0.3rem;
 }
