@@ -287,26 +287,43 @@ footer .fa-hands-helping:before {
 }
 
 .main-categorie {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   background-color: #f6f6f6;
 }
 
 .commandez {
-  background: #f6f6f6;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.7rem;
 }
+.commandez h3 {
+  margin-left: 0.9rem;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.1rem;
+  position: relative;
+}
+.commandez h3:after {
+  content: "";
+  width: 1.2rem;
+  height: 0.2rem;
+  background-color: #99e2d0;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 2.5rem;
+}
 
 .commandez__categorie {
-  background-color: white;
   border-radius: 1rem;
+  overflow: hidden;
 }
 .commandez__categorie .commandez-choix {
   display: flex;
   overflow: hidden;
   background-color: white;
   border-radius: 1rem;
+  margin: 0.5rem;
   box-shadow: 0 3px 5px #d3d3d3;
 }
 .commandez__categorie .commandez-choix .commandez-choix__prix {
@@ -318,6 +335,13 @@ footer .fa-hands-helping:before {
 }
 .commandez__categorie .commandez-choix .commandez-choix__description {
   padding: 1rem;
+  overflow: hidden;
+}
+.commandez__categorie .commandez-choix .commandez-choix__description h4,
+.commandez__categorie .commandez-choix .commandez-choix__description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .commandez__categorie .commandez-choix .commandez-choix__check {
   background-color: #99e2d0;
@@ -328,6 +352,7 @@ footer .fa-hands-helping:before {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 .commandez__categorie .commandez-choix .commandez-choix__check i {
   background: white;
@@ -343,7 +368,7 @@ footer .fa-hands-helping:before {
   margin-right: 0;
 }
 .commandez__categorie .commandez-choix:hover i {
-  animation: rotate 5s ease-in-out;
+  animation: rotate 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
