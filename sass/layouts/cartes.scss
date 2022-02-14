@@ -50,22 +50,23 @@
       }
       .heart i {
         position: absolute;
-        font-size: 25px;
+        font-size: 1.8rem;
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
       }
+
       .fas.fa-heart {
         color: transparent;
         @include gradient;
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        transition: all 500ms ease-in-out;
+        transition: all 700ms ease-out;
       }
       .fas.fa-heart:hover {
         opacity: 1;
-        transform: translateY(-50%) scale(1.07);
+        transform: translateY(-50%) scale(1.02);
       }
     }
   }

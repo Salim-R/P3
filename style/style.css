@@ -23,9 +23,10 @@ a {
   color: inherit;
 }
 
-h3,
-p {
+p,
+h4 {
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -67,7 +68,7 @@ header h1 {
   font-weight: 100;
 }
 .reservez button {
-  background-image: linear-gradient(170deg, #9356dc, #ff79da);
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
   color: white;
   font-weight: 400;
   font-size: 16px;
@@ -185,22 +186,22 @@ header h1 {
 }
 .menus .carte__description .heart i {
   position: absolute;
-  font-size: 25px;
+  font-size: 1.8rem;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
 .menus .carte__description .fas.fa-heart {
   color: transparent;
-  background-image: linear-gradient(170deg, #9356dc, #ff79da);
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 500ms ease-in-out;
+  transition: all 700ms ease-out;
 }
 .menus .carte__description .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.07);
+  transform: translateY(-50%) scale(1.02);
 }
 
 footer {
@@ -236,6 +237,14 @@ footer .fa-hands-helping:before {
   font-size: 0.7rem;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .banniere img {
   width: 100%;
   max-height: 70vh;
@@ -266,7 +275,7 @@ footer .fa-hands-helping:before {
 }
 .menu__title .fas.fa-heart {
   color: transparent;
-  background-image: linear-gradient(170deg, #9356dc, #ff79da);
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -274,7 +283,12 @@ footer .fa-hands-helping:before {
 }
 .menu__title .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%);
+}
+
+.main-categorie {
+  padding: 0 1rem;
+  background-color: #f6f6f6;
 }
 
 .commandez {
@@ -283,13 +297,53 @@ footer .fa-hands-helping:before {
   grid-template-columns: 1fr;
   gap: 0.7rem;
 }
-.commandez .commandez__categorie {
-  border: 1px solid blue;
-  background-color: white;
-}
 
-.main-categorie {
-  padding: 0 0.3rem;
+.commandez__categorie {
+  background-color: white;
+  border-radius: 1rem;
+}
+.commandez__categorie .commandez-choix {
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 3px 5px #d3d3d3;
+}
+.commandez__categorie .commandez-choix .commandez-choix__prix {
+  margin-left: auto;
+  display: flex;
+  padding: 1rem;
+  align-items: flex-end;
+  font-weight: 900;
+}
+.commandez__categorie .commandez-choix .commandez-choix__description {
+  padding: 1rem;
+}
+.commandez__categorie .commandez-choix .commandez-choix__check {
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: margin-right 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.commandez__categorie .commandez-choix .commandez-choix__check i {
+  background: white;
+  border-radius: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99e2d0;
+}
+.commandez__categorie .commandez-choix:hover .commandez-choix__check {
+  margin-right: 0;
+}
+.commandez__categorie .commandez-choix:hover i {
+  animation: rotate 5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
