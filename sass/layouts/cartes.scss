@@ -41,8 +41,10 @@
       @include shadow;
       margin-top: -2.2rem;
       h3 {
-        padding: 1.2rem 0.5rem 0 0.5rem;
+        padding: 0rem 0.5rem 0 0.5rem;
         max-width: 50%;
+        margin-bottom: 0;
+        font-size: 1.1rem;
       }
       p {
         padding: 0.5rem 0.5rem 1rem 0.5rem;
@@ -62,7 +64,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        transition: all 700ms ease-out;
+        transition: all 700ms ease-in-out;
       }
       .fas.fa-heart:hover {
         opacity: 1;
