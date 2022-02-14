@@ -51,7 +51,7 @@
     margin-left: 0.9rem;
     margin-bottom: 0;
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
     &:after {
       content: "";
@@ -116,6 +116,7 @@
       }
     }
     &:hover {
+      cursor: pointer;
       .commandez-choix__check {
         margin-right: 0;
       }
@@ -123,5 +124,14 @@
         animation: rotate 0.5s ease-in-out;
       }
     }
+  }
+}
+section.order {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    @include button;
   }
 }

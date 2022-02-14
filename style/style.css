@@ -68,9 +68,9 @@ header h1 {
   font-weight: 100;
 }
 .reservez button {
-  background-image: linear-gradient(180deg, #9356dc, #ff79da);
   color: white;
   font-weight: 400;
+  cursor: pointer;
   font-size: 16px;
   border: none;
   border-radius: 32px;
@@ -79,6 +79,7 @@ header h1 {
   transition: transform 200ms;
   margin-top: 16px;
   margin-bottom: 25px;
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
 }
 .reservez button:hover {
   transform: scale(1.02);
@@ -300,7 +301,7 @@ footer .fa-hands-helping:before {
   margin-left: 0.9rem;
   margin-bottom: 0;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1rem;
   position: relative;
 }
 .commandez h3:after {
@@ -364,11 +365,39 @@ footer .fa-hands-helping:before {
   align-items: center;
   color: #99e2d0;
 }
+.commandez__categorie .commandez-choix:hover {
+  cursor: pointer;
+}
 .commandez__categorie .commandez-choix:hover .commandez-choix__check {
   margin-right: 0;
 }
 .commandez__categorie .commandez-choix:hover i {
   animation: rotate 0.5s ease-in-out;
+}
+
+section.order {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.order button {
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 1px 2px 16px -5px #000000;
+  padding: 16px 20px;
+  transition: transform 200ms;
+  margin-top: 16px;
+  margin-bottom: 25px;
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
+}
+section.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
