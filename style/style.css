@@ -98,6 +98,15 @@ header h1 {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  background-color: #fff;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+}
+
 .etapes {
   counter-reset: etapes;
   padding-bottom: 3rem;

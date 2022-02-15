@@ -15,3 +15,11 @@
     @include button;
   }
 }
+.loader {
+  position: fixed;
+  background-color: #fff;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+}
