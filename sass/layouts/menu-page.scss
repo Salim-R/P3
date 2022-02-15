@@ -70,6 +70,13 @@
   overflow: hidden;
 
   .commandez-choix {
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation-delay: 100ms * $i;
+      }
+    }
+    animation: progressif 1s;
+    animation-fill-mode: both;
     display: flex;
     overflow: hidden;
     background-color: white;
@@ -92,6 +99,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        font-size: 00.9rem;
       }
     }
     .commandez-choix__check {
@@ -133,5 +141,6 @@ section.order {
   align-items: center;
   button {
     @include button;
+    width: 50%;
   }
 }

@@ -36,6 +36,18 @@ header {
   padding: 5px;
   position: relative;
 }
+header i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  height: 0%;
+  transition: all 0.5s;
+}
+header i:hover {
+  transform: scale(1.2);
+}
 header h1 {
   margin-bottom: 0;
 }
@@ -139,9 +151,11 @@ header h1 {
 .menus {
   background-color: #f6f6f6;
   padding-bottom: 4rem;
+  display: grid;
+  gap: 2rem;
 }
 .menus h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 .menus .menus__cartes {
   display: grid;
@@ -205,6 +219,7 @@ header h1 {
 .menus .carte__description .fas.fa-heart:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.02);
+  cursor: pointer;
 }
 
 footer {
@@ -246,6 +261,16 @@ footer .fa-hands-helping:before {
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes progressif {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .banniere img {
@@ -322,12 +347,23 @@ footer .fa-hands-helping:before {
   overflow: hidden;
 }
 .commandez__categorie .commandez-choix {
+  animation: progressif 1s;
+  animation-fill-mode: both;
   display: flex;
   overflow: hidden;
   background-color: white;
   border-radius: 1rem;
   margin: 0.5rem;
   box-shadow: 0 3px 5px #d3d3d3;
+}
+.commandez__categorie .commandez-choix:nth-child(1) {
+  animation-delay: 100ms;
+}
+.commandez__categorie .commandez-choix:nth-child(2) {
+  animation-delay: 200ms;
+}
+.commandez__categorie .commandez-choix:nth-child(3) {
+  animation-delay: 300ms;
 }
 .commandez__categorie .commandez-choix .commandez-choix__prix {
   margin-left: auto;
@@ -345,6 +381,7 @@ footer .fa-hands-helping:before {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 .commandez__categorie .commandez-choix .commandez-choix__check {
   background-color: #99e2d0;
@@ -396,6 +433,7 @@ section.order button {
   margin-top: 16px;
   margin-bottom: 25px;
   background-image: linear-gradient(180deg, #9356dc, #ff79da);
+  width: 50%;
 }
 section.order button:hover {
   transform: scale(1.02);
