@@ -5,28 +5,31 @@
   "main": "index.js",
   "dependencies": {
     "anymatch": "^3.1.2",
-    "chokidar": "^3.5.3",
-    "braces": "^3.0.2",
-    "immutable": "^4.0.0",
     "binary-extensions": "^2.2.0",
+    "braces": "^3.0.2",
+    "chokidar": "^3.5.3",
     "fill-range": "^7.0.1",
     "glob-parent": "^5.1.2",
-    "is-extglob": "^2.1.1",
+    "immutable": "^4.0.0",
     "is-binary-path": "^2.1.0",
-    "is-number": "^7.0.0",
+    "is-extglob": "^2.1.1",
     "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
     "normalize-path": "^3.0.0",
     "picomatch": "^2.3.1",
     "readdirp": "^3.6.0",
     "sass": "^1.49.4",
-    "to-regex-range": "^5.0.1",
-    "source-map-js": "^1.0.2"
+    "source-map-js": "^1.0.2",
+    "to-regex-range": "^5.0.1"
   },
   "devDependencies": {
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.49.4"
   },
   "scripts": {
-    "sass": "sass --watch sass/style.scss:style/style.css"
+    "sass": "sass --watch sass/style.scss:style/style.css",
+    "prefix": "postcss style/style.css --use autoprefixer -d prefixer"
   },
   "repository": {
     "type": "git",
@@ -34,6 +37,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Salim-R/P3/issues"
   },
