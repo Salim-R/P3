@@ -16,3 +16,22 @@
     opacity: 1;
   }
 }
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes flash {
+  0% {
+    color: $color-secondary;
+    text-shadow: 0 0 7px $color-secondary;
+  }
+  90% {
+    color: $color-primary;
+    text-shadow: none;
+  }
+  100% {
+    color: $color-secondary;
+    text-shadow: 0 0 7px$color-secondary;
+  }
+}
