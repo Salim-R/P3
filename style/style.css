@@ -361,11 +361,11 @@ header h1 {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 700ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .menus .menus__cartes .carte__description .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.02);
+  transform: translateY(-50%) scale(1.05);
   cursor: pointer;
 }
 
@@ -454,7 +454,7 @@ footer .fa-hands-helping:before {
   object-fit: cover;
   display: block;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .banniere img {
     max-height: 50vh;
   }
@@ -487,11 +487,11 @@ footer .fa-hands-helping:before {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .menu__title .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1.05);
 }
 
 .main-categorie {
@@ -501,17 +501,26 @@ footer .fa-hands-helping:before {
 
 .commandez {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
-.commandez h3 {
+@media screen and (min-width: 992px) {
+  .commandez {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.commandez__categorie {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.commandez__categorie h3 {
   margin-left: 0.9rem;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
   font-weight: 300;
   font-size: 1rem;
   position: relative;
 }
-.commandez h3:after {
+.commandez__categorie h3:after {
   content: "";
   width: 1.2rem;
   height: 0.2rem;
@@ -520,12 +529,6 @@ footer .fa-hands-helping:before {
   top: 1.5rem;
   left: 0;
   width: 2.5rem;
-}
-
-.commandez__categorie {
-  border-radius: 1rem;
-  overflow: hidden;
-  display: grid;
 }
 .commandez__categorie .commandez-choix {
   animation: progressif 1s;
@@ -606,6 +609,11 @@ footer .fa-hands-helping:before {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .order {
+    height: 30vh;
+  }
+}
 .order button {
   color: white;
   font-weight: 400;
@@ -624,6 +632,17 @@ footer .fa-hands-helping:before {
 .order button:hover {
   transform: scale(1.02);
   opacity: 0.8;
+}
+@media screen and (min-width: 768px) {
+  .order button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .order button {
+    width: 25%;
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

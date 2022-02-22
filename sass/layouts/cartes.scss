@@ -84,11 +84,11 @@
           background-clip: text;
           -webkit-background-clip: text;
           opacity: 0;
-          transition: all 700ms ease-in-out;
+          transition: all 400ms ease-in-out;
         }
         .fas.fa-heart:hover {
           opacity: 1;
-          transform: translateY(-50%) scale(1.02);
+          transform: translateY(-50%) scale(1.05);
           cursor: pointer;
         }
       }
