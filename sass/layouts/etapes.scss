@@ -5,20 +5,43 @@
   padding-bottom: 3rem;
   & h2 {
     margin-bottom: 2rem;
+    @include tablette-only {
+      text-align: center;
+    }
+    @include desktop-only {
+      font-size: 30px;
+      margin-bottom: 3rem;
+    }
   }
   & ol {
     display: flex;
     flex-direction: column;
     gap: 1.5 * $size-etapes;
     padding-left: 16px;
+    @include tablette-only {
+      justify-content: center;
+      align-items: center;
+      @include desktop-only {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        column-gap: 4rem;
+      }
+    }
   }
   & li {
     position: relative;
-    background-color: #f6f6f6;
+    background-color: $white-grey;
     padding: 22px 32px;
     border-radius: 16px;
     list-style-type: none;
     font-weight: 500;
+    @include tablette-only {
+      width: 50%;
+    }
+    @include desktop-only {
+      width: 30%;
+    }
     @include shadow;
     &:hover {
       @include zoom;

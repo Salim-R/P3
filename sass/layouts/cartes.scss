@@ -1,23 +1,41 @@
 .menus {
-  background-color: #f6f6f6;
+  background-color: $white-grey;
   padding-bottom: 4rem;
   display: grid;
   gap: 2rem;
   h2 {
     margin-bottom: 0;
+    @include tablette-only {
+      text-align: center;
+    }
+
+    @include desktop-only {
+      font-size: 35px;
+      margin-bottom: 2rem;
+    }
   }
 
   .menus__cartes {
-    display: grid;
-    grid-template-columns: 1fr;
+    a {
+      @include desktop-only {
+        width: 80%;
+      }
+    }
     gap: 2rem;
-
+    display: grid;
+    @include tablette-only {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop-only {
+      place-items: center;
+    }
     .nouveau {
       position: relative;
     }
     .nouveau::before {
       content: "Nouveau";
-      color: #1c9879;
+      color: $color-nouveau;
       background-color: $color-tertiary;
       font-weight: 500;
       position: absolute;
@@ -28,50 +46,51 @@
       display: grid;
       place-items: center;
     }
-  }
-  .carte {
-    &__Image {
-      object-fit: cover;
-      width: 100%;
-      height: 14rem;
-      border-radius: 1rem 1rem 0 0;
-    }
-    &__description {
-      position: relative;
-      background-color: white;
-      border-radius: 0 0 1rem 1rem;
-      @include shadow;
-      margin-top: -2.2rem;
-      h3 {
-        padding: 0rem 0.5rem 0 0.5rem;
-        max-width: 50%;
-        margin-bottom: 0;
-        font-size: 1.1rem;
+    .carte {
+      &__Image {
+        object-fit: cover;
+        width: 100%;
+        height: 14rem;
+        border-radius: 1rem 1rem 0 0;
       }
-      p {
-        padding: 0.5rem 0.5rem 1rem 0.5rem;
-        max-width: 50%;
-      }
-      .heart i {
-        position: absolute;
-        font-size: 1.8rem;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      &__description {
+        position: relative;
+        background-color: $white;
+        border-radius: 0 0 1rem 1rem;
+        @include shadow;
+        margin-top: -2.2rem;
+        h3 {
+          padding: 1rem 0.5rem 0 0.5rem;
+          max-width: 50%;
+          margin-bottom: 0;
+          font-size: 1.1rem;
+        }
+        p {
+          padding: 0.5rem 0.5rem 1rem 0.5rem;
+          max-width: 50%;
+        }
+        .heart,
+        .heart i {
+          position: absolute;
+          font-size: 1.8rem;
+          right: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
 
-      .fas.fa-heart {
-        color: transparent;
-        @include gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 700ms ease-in-out;
-      }
-      .fas.fa-heart:hover {
-        opacity: 1;
-        transform: translateY(-50%) scale(1.02);
-        cursor: pointer;
+        .fas.fa-heart {
+          color: transparent;
+          @include gradient;
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 0;
+          transition: all 700ms ease-in-out;
+        }
+        .fas.fa-heart:hover {
+          opacity: 1;
+          transform: translateY(-50%) scale(1.02);
+          cursor: pointer;
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+@import url(../utils/mixin.scssz);
 .city {
   background-color: #eaeaea;
   text-align: center;
@@ -6,8 +7,16 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  i {
+    @include desktop-only {
+      font-size: 20px;
+    }
+  }
   h2 {
     font-size: 16px;
     font-weight: 500;
+    @include desktop-only {
+      font-size: 25px;
+    }
   }
 }

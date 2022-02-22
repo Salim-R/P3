@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url(../utils/mixin.scssz);
 *,
 ::before,
 ::after {
@@ -51,6 +52,11 @@ header i:hover {
 header h1 {
   margin-bottom: 0;
 }
+@media screen and (min-width: 992px) {
+  header h1 {
+    font-size: 45px;
+  }
+}
 
 .city {
   background-color: #eaeaea;
@@ -61,23 +67,43 @@ header h1 {
   align-items: center;
   gap: 16px;
 }
+@media screen and (min-width: 992px) {
+  .city i {
+    font-size: 20px;
+  }
+}
 .city h2 {
   font-size: 16px;
   font-weight: 500;
 }
+@media screen and (min-width: 992px) {
+  .city h2 {
+    font-size: 25px;
+  }
+}
 
 .reservez {
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   padding: 21px;
   margin-bottom: 2rem;
 }
 .reservez h2 {
   font-size: 23px;
 }
+@media screen and (min-width: 992px) {
+  .reservez h2 {
+    font-size: 30px;
+  }
+}
 .reservez p {
   font-size: 16px;
   font-weight: 100;
+}
+@media screen and (min-width: 992px) {
+  .reservez p {
+    font-size: 20px;
+  }
 }
 .reservez button {
   color: white;
@@ -95,7 +121,12 @@ header h1 {
 }
 .reservez button:hover {
   transform: scale(1.02);
-  opacity: 0.9;
+  opacity: 0.8;
+}
+@media screen and (min-width: 992px) {
+  .reservez button {
+    font-size: 20px;
+  }
 }
 
 .loader {
@@ -159,11 +190,36 @@ header h1 {
 .etapes h2 {
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .etapes h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etapes h2 {
+    font-size: 30px;
+    margin-bottom: 3rem;
+  }
+}
 .etapes ol {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .etapes ol {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  .etapes ol {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    column-gap: 4rem;
+  }
 }
 .etapes li {
   position: relative;
@@ -173,6 +229,16 @@ header h1 {
   list-style-type: none;
   font-weight: 500;
   box-shadow: 0 3px 5px #d3d3d3;
+}
+@media screen and (min-width: 768px) {
+  .etapes li {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etapes li {
+    width: 30%;
+  }
 }
 .etapes li:hover {
   transform: scale(1.02);
@@ -211,10 +277,36 @@ header h1 {
 .menus h2 {
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .menus h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus h2 {
+    font-size: 35px;
+    margin-bottom: 2rem;
+  }
+}
 .menus .menus__cartes {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 2rem;
+  display: grid;
+}
+@media screen and (min-width: 992px) {
+  .menus .menus__cartes a {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menus .menus__cartes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus .menus__cartes {
+    place-items: center;
+  }
 }
 .menus .menus__cartes .nouveau {
   position: relative;
@@ -232,45 +324,46 @@ header h1 {
   display: grid;
   place-items: center;
 }
-.menus .carte__Image {
+.menus .menus__cartes .carte__Image {
   object-fit: cover;
   width: 100%;
   height: 14rem;
   border-radius: 1rem 1rem 0 0;
 }
-.menus .carte__description {
+.menus .menus__cartes .carte__description {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
   box-shadow: 0 3px 5px #d3d3d3;
   margin-top: -2.2rem;
 }
-.menus .carte__description h3 {
-  padding: 0rem 0.5rem 0 0.5rem;
+.menus .menus__cartes .carte__description h3 {
+  padding: 1rem 0.5rem 0 0.5rem;
   max-width: 50%;
   margin-bottom: 0;
   font-size: 1.1rem;
 }
-.menus .carte__description p {
+.menus .menus__cartes .carte__description p {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
   max-width: 50%;
 }
-.menus .carte__description .heart i {
+.menus .menus__cartes .carte__description .heart,
+.menus .menus__cartes .carte__description .heart i {
   position: absolute;
   font-size: 1.8rem;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
-.menus .carte__description .fas.fa-heart {
+.menus .menus__cartes .carte__description .fas.fa-heart {
   color: transparent;
-  background-image: linear-gradient(180deg, #ff79da, #9356dc);
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 700ms ease-in-out;
 }
-.menus .carte__description .fas.fa-heart:hover {
+.menus .menus__cartes .carte__description .fas.fa-heart:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.02);
   cursor: pointer;
@@ -282,14 +375,24 @@ footer {
   grid-template-columns: 1fr;
   padding: 1rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    place-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    place-items: baseline;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 footer:nth-child(5) {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 footer h2 {
   font-family: "Shrikhand", sans-serif;
   color: white;
   font-weight: 500;
-  margin-top: 1.8rem;
   font-size: 1.2rem;
 }
 footer a {
@@ -351,6 +454,11 @@ footer .fa-hands-helping:before {
   object-fit: cover;
   display: block;
 }
+@media screen and (min-width: 992px) {
+  .banniere img {
+    max-height: 50vh;
+  }
+}
 
 .menu__title {
   position: relative;
@@ -375,7 +483,7 @@ footer .fa-hands-helping:before {
 }
 .menu__title .fas.fa-heart {
   color: transparent;
-  background-image: linear-gradient(180deg, #ff79da, #9356dc);
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -394,7 +502,7 @@ footer .fa-hands-helping:before {
 .commandez {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.7rem;
+  gap: 1rem;
 }
 .commandez h3 {
   margin-left: 0.9rem;
@@ -417,6 +525,7 @@ footer .fa-hands-helping:before {
 .commandez__categorie {
   border-radius: 1rem;
   overflow: hidden;
+  display: grid;
 }
 .commandez__categorie .commandez-choix {
   animation: progressif 1s;
@@ -514,7 +623,7 @@ footer .fa-hands-helping:before {
 }
 .order button:hover {
   transform: scale(1.02);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */

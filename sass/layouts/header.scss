@@ -1,4 +1,5 @@
 @import "../utils/mixin.scss";
+@import "../utils/variables.scss";
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -20,5 +21,8 @@ header {
   }
   h1 {
     margin-bottom: 0;
+    @include desktop-only {
+      font-size: 45px;
+    }
   }
 }

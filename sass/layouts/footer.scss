@@ -2,20 +2,26 @@ footer {
   background-color: $footer-color;
   display: grid;
   grid-template-columns: 1fr;
+  @include tablette-only {
+    place-items: center;
+  }
+  @include desktop-only {
+    place-items: baseline;
+    grid-template-columns: repeat(5, 1fr);
+  }
   padding: 1rem 1rem;
   &:nth-child(5) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   h2 {
     font-family: "Shrikhand", sans-serif;
-    color: white;
+    color: $white;
     font-weight: 500;
-    margin-top: 1.8rem;
     font-size: 1.2rem;
   }
   a {
     padding: 0.2rem;
-    color: white;
+    color: $white;
     i {
       padding-right: 0.8rem;
     }
