@@ -71,12 +71,30 @@ header h1 {
     font-size: 20px;
   }
 }
-.city h2 {
+.city .css-input {
+  padding: 0px;
   font-size: 16px;
+  border-width: 0px;
+  background-color: inherit;
+  border-style: hidden;
+  border-radius: 0px;
   font-weight: 500;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 992px) {
-  .city h2 {
+  .city .css-input {
+    width: 12rem;
+  }
+}
+.city .css-input:focus {
+  outline: none;
+  border-color: inherit;
+}
+@media screen and (min-width: 992px) {
+  .city .css-input {
     font-size: 25px;
   }
 }
@@ -544,14 +562,14 @@ footer .fa-hands-helping:before {
   margin: 0.5rem;
   box-shadow: 0 3px 5px #d3d3d3;
 }
-.commandez__categorie .commandez-choix:nth-child(1) {
-  animation-delay: 100ms;
-}
 .commandez__categorie .commandez-choix:nth-child(2) {
   animation-delay: 200ms;
 }
 .commandez__categorie .commandez-choix:nth-child(3) {
   animation-delay: 300ms;
+}
+.commandez__categorie .commandez-choix:nth-child(4) {
+  animation-delay: 400ms;
 }
 .commandez__categorie .commandez-choix .commandez-choix__prix {
   margin-left: auto;

@@ -74,7 +74,7 @@
     }
   }
   .commandez-choix {
-    @for $i from 1 through 3 {
+    @for $i from 2 through 4 {
       &:nth-child(#{$i}) {
         animation-delay: 100ms * $i;
       }
