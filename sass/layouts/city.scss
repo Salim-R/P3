@@ -1,11 +1,8 @@
 @import url(../utils/mixin.scssz);
 .city {
   background-color: #eaeaea;
-  text-align: center;
   padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   gap: 16px;
   i {
     @include desktop-only {

@@ -60,11 +60,10 @@ header h1 {
 
 .city {
   background-color: #eaeaea;
-  text-align: center;
   padding: 8px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 @media screen and (min-width: 992px) {
@@ -389,6 +388,11 @@ footer {
 footer:nth-child(5) {
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 768px) {
+  footer:nth-child(5) {
+    margin-bottom: 0;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", sans-serif;
   color: white;
@@ -491,7 +495,7 @@ footer .fa-hands-helping:before {
 }
 .menu__title .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.05);
+  transform: translateY(-49%) scale(1.05);
 }
 
 .main-categorie {
@@ -579,8 +583,8 @@ footer .fa-hands-helping:before {
   border-radius: 0 1rem 1rem 0;
   transition: margin-right 0.5s;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 .commandez__categorie .commandez-choix .commandez-choix__check i {
@@ -606,8 +610,8 @@ footer .fa-hands-helping:before {
 .order {
   height: 20vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 992px) {
   .order {

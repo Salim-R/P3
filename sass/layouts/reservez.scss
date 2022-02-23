@@ -27,9 +27,7 @@
 .loader {
   position: fixed;
   background-color: $color-tertiary;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   height: 100vh;
   inset: 0;
   z-index: 1;

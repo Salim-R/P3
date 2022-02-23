@@ -39,7 +39,7 @@
   }
   .fas.fa-heart:hover {
     opacity: 1;
-    transform: translateY(-50%) scale(1.05);
+    transform: translateY(-49%) scale(1.05);
   }
 }
 .main-categorie {
@@ -117,9 +117,7 @@
       width: 4rem;
       border-radius: 0 1rem 1rem 0;
       transition: margin-right 0.5s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       flex-shrink: 0;
       i {
         background: white;
@@ -145,9 +143,7 @@
 }
 .order {
   height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   @include desktop-only {
     height: 30vh;
   }

@@ -12,6 +12,9 @@ footer {
   padding: 1rem 1rem;
   &:nth-child(5) {
     margin-bottom: 2rem;
+    @include tablette-only {
+      margin-bottom: 0;
+    }
   }
   h2 {
     font-family: "Shrikhand", sans-serif;
