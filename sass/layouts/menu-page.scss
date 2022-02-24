@@ -6,6 +6,9 @@
   @include tablette-only {
     max-height: 50vh;
   }
+  @include desktop-only {
+    max-height: 60vh;
+  }
   display: block;
 }
 
@@ -48,9 +51,13 @@
 }
 .commandez {
   display: grid;
+  @include tablette-only {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include desktop-only {
     grid-template-columns: repeat(3, 1fr);
   }
+
   gap: 1rem;
 }
 .commandez__categorie {

@@ -13,15 +13,16 @@
     padding: 0px;
     font-size: 16px;
     border-width: 0px;
-
     background-color: inherit;
     border-style: hidden;
     border-radius: 0px;
     font-weight: 500;
     width: 8rem;
-    @include flex-center;
-    @include tablette-only {
+    &::placeholder {
+      color: black;
     }
+    @include flex-center;
+
     @include desktop-only {
       width: 12rem;
     }

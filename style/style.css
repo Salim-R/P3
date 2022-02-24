@@ -84,6 +84,9 @@ header h1 {
   align-items: center;
   justify-content: center;
 }
+.city .css-input::placeholder {
+  color: black;
+}
 @media screen and (min-width: 992px) {
   .city .css-input {
     width: 12rem;
@@ -481,6 +484,11 @@ footer .fa-hands-helping:before {
     max-height: 50vh;
   }
 }
+@media screen and (min-width: 992px) {
+  .banniere img {
+    max-height: 60vh;
+  }
+}
 
 .menu__title {
   position: relative;
@@ -524,6 +532,11 @@ footer .fa-hands-helping:before {
 .commandez {
   display: grid;
   gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .commandez {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (min-width: 992px) {
   .commandez {
