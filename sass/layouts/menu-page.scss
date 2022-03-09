@@ -18,10 +18,16 @@
   border-radius: 1.7rem 1.7rem 0 0;
   margin-top: -2.5rem;
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: "Shrikhand", cursive;
     padding: 2rem 1rem 1rem;
     margin: 0;
+    @include tablette-only {
+      text-align: center;
+    }
+    @include desktop-only {
+      text-align: start;
+    }
   }
   .heart,
   .heart i {
@@ -52,10 +58,11 @@
 .commandez {
   display: grid;
   @include tablette-only {
-    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
   }
   @include desktop-only {
     grid-template-columns: repeat(3, 1fr);
+    place-items: initial;
   }
 
   gap: 1rem;
@@ -63,10 +70,17 @@
 .commandez__categorie {
   border-radius: 1rem;
   overflow: hidden;
+  @include tablette-only {
+    width: 50%;
+  }
+  @include desktop-only {
+    width: 95%;
+  }
+
   h3 {
     margin-left: 0.9rem;
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
     position: relative;
     &:after {
@@ -102,6 +116,9 @@
       align-items: flex-end;
       font-weight: 500;
       font-size: 0.9rem;
+      @include tablette-only {
+        font-size: 1rem;
+      }
     }
     .commandez-choix__description {
       padding: 1rem;
@@ -112,10 +129,16 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         font-size: 0.8rem;
+        @include tablette-only {
+          font-size: 0.9rem;
+        }
       }
       h4 {
         font-size: 1rem;
         font-weight: 500;
+        @include tablette-only {
+          font-size: 1.1rem;
+        }
       }
     }
     .commandez-choix__check {
@@ -124,16 +147,15 @@
       width: 4rem;
       border-radius: 0 1rem 1rem 0;
       transition: margin-right 0.5s;
-      @include flex-center;
       flex-shrink: 0;
+      @include flex-center;
+
       i {
         background: white;
         border-radius: 1rem;
         width: 1.5rem;
         height: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         color: $color-tertiary;
       }
     }
@@ -161,7 +183,7 @@
       width: 30%;
     }
     @include desktop-only {
-      width: 25%;
+      width: 20%;
       font-size: 20px;
     }
   }
